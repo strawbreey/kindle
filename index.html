@@ -21,12 +21,12 @@
 
       height: 300px;
       text-align: center;
-      font: 30px/300px Helvetica, Arial, sans-serif;
+      font:  Helvetica, Arial, sans-serif;
     }
   </style>
 </head>
 
-<body>
+<body id="body">
   <h1>Kindle Test</h1>
   <div id="myElement"></div>
   <p>2020年3月24日，国家科学技术奖励工作办公室发布公告，对2020年度国家科学技术奖1500多项受理项目进行公示。</p>
@@ -60,8 +60,25 @@
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     mc.on("panleft panright panup pandown tap press", function(ev) {
-        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.outerWidth + '   ,' + window.navigator.userAgent;
+        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.outerHeight + '   ,' + window.navigator.userAgent;
     });
+
+
+
+    window.onload= () => {
+      console.log('666')
+
+
+    }
+
+    myElement.onclick = function(){
+      var dom = document.getElementById('body');
+      dom.scrollTo(100, 1000); 
+      console.log(dom.scrollLeft)
+      console.log(dom.scrollTop)
+    }
+
+
   </script>
 </body>
 </html>
