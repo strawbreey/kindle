@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+
   <title>kindle Test</title>
   <style>
     body {
@@ -13,6 +16,12 @@
       width: 758px;
       height: 1024px;
       border: 1px solid #ccc;
+    }
+    #myElement {
+      background: silver;
+      height: 300px;
+      text-align: center;
+      font: 30px/300px Helvetica, Arial, sans-serif;
     }
   </style>
 </head>
@@ -39,7 +48,20 @@
   <p>屠呦呦提名的项目“中医药文献传承创新模式研究与应用”、袁隆平提名的项目“广适性骨干亲本Y58S创制与超级稻新品种选育”等被提名为国家科技进步奖一等奖。陈薇、石正丽等人提名的项目“中国序列7型猪链球菌的发现、应对、致病机理和新传播模式”、李兰娟和魏于全等人提名的项目“铁稳态代谢的分子调控网络”等被提名为国家科技进步奖二等奖。</p>
 
   <p>在国家科技奖创新团队奖评选中，钟南山呼吸疾病防控创新团队获得提名。</p>
+  
+  <div id="myElement"></div>
 
-  <div class="div1"></div>
+  <script>
+    var myElement = document.getElementById('myElement');
+
+    // create a simple instance
+    // by default, it only adds horizontal recognizers
+    var mc = new Hammer(myElement);
+
+    // listen to events...
+    mc.on("panleft panright tap press", function(ev) {
+        myElement.textContent = ev.type +" gesture detected.";
+    });
+  </script>
 </body>
 </html>
