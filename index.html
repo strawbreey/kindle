@@ -28,6 +28,7 @@
 
 <body>
   <h1>Kindle Test</h1>
+  <div id="myElement"></div>
   <p>2020年3月24日，国家科学技术奖励工作办公室发布公告，对2020年度国家科学技术奖1500多项受理项目进行公示。</p>
 
   <p>屠呦呦提名的项目“中医药文献传承创新模式研究与应用”、袁隆平提名的项目“广适性骨干亲本Y58S创制与超级稻新品种选育”等被提名为国家科技进步奖一等奖。陈薇、石正丽等人提名的项目“中国序列7型猪链球菌的发现、应对、致病机理和新传播模式”、李兰娟和魏于全等人提名的项目“铁稳态代谢的分子调控网络”等被提名为国家科技进步奖二等奖。</p>
@@ -49,16 +50,13 @@
 
   <p>在国家科技奖创新团队奖评选中，钟南山呼吸疾病防控创新团队获得提名。</p>
   
-  <div id="myElement"></div>
+
 
   <script>
     var myElement = document.getElementById('myElement');
 
-    // create a simple instance
-    // by default, it only adds horizontal recognizers
     var mc = new Hammer(myElement);
 
-    // listen to events...
     mc.on("panleft panright tap press", function(ev) {
         myElement.textContent = ev.type +" gesture detected.";
     });
