@@ -15,10 +15,10 @@
     .div1 {
       width: 758px;
       height: 1024px;
-      border: 1px solid #ccc;
     }
     #myElement {
-      background: silver;
+      border: 1px solid #ccc;
+
       height: 300px;
       text-align: center;
       font: 30px/300px Helvetica, Arial, sans-serif;
@@ -57,12 +57,10 @@
 
     var mc = new Hammer(myElement);
 
-
-
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     mc.on("panleft panright panup pandown tap press", function(ev) {
-        myElement.textContent = ev.type +" gesture detected.";
+        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.outerWidth + '   ,' + window.navigator.userAgent;
     });
   </script>
 </body>
