@@ -27,7 +27,7 @@
 </head>
 
 <body id="body">
-  <h1>Kindle Test</h1>
+  <h1 id="title">Kindle Test</h1>
   <div id="myElement"></div>
   <p>2020年3月24日，国家科学技术奖励工作办公室发布公告，对2020年度国家科学技术奖1500多项受理项目进行公示。</p>
 
@@ -55,6 +55,9 @@
   <script>
     var myElement = document.getElementById('myElement');
 
+    var title = document.getElementById('title');
+
+
     var mc = new Hammer(myElement);
 
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
@@ -71,7 +74,7 @@
 
     }
 
-    myElement.onclick = function(){
+    title.onclick = function(){
       var dom = document.getElementById('body');
       dom.scrollTo(100, 1000); 
       console.log(dom.scrollLeft)
