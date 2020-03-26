@@ -55,32 +55,14 @@
   <script>
     var myElement = document.getElementById('myElement');
 
-    var title = document.getElementById('title');
-
 
     var mc = new Hammer(myElement);
 
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     mc.on("panleft panright panup pandown tap press", function(ev) {
-        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.outerHeight + '   ,' + window.navigator.userAgent;
+        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.innerHeight + '   ,' + window.navigator.userAgent;
     });
-
-
-
-    window.onload= () => {
-      console.log('666')
-
-
-    }
-
-    title.onclick = function(){
-      var dom = document.getElementById('body');
-      dom.scrollTo(100, 1000); 
-      console.log(dom.scrollLeft)
-      console.log(dom.scrollTop)
-    }
-
 
   </script>
 </body>
