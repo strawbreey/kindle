@@ -74,7 +74,7 @@
     <p>在国家科技奖创新团队奖评选中，钟南山呼吸疾病防控创新团队获得提名。</p>
   
 </div>
-
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
   <script>
     var myElement = document.getElementById('myElement');
 
@@ -89,19 +89,15 @@
 
     let scrollTop = 100
 
-    window.onload = () => {
-      console.log('onload')
-      let body = document.getElementById('body')
 
-      let click = document.getElementById('click')
-      click.onclick = () => {
-        console.log('click')
-        window.scrollTo(0, scrollTop)
-        scrollTop += 500 
-        myElement.textContent =  'scrollTop: ' + scrollTop
-      }
+    $('#click').click(res => {
+      console.log('666')
+      myElement.textContent =  'scrollTop: ' + scrollTop
+      scrollTop += 100
+      window.scrollTo(0, scrollTop)
 
-    }
+
+    })
   </script>
 </body>
 </html>
