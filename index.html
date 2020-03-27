@@ -31,9 +31,9 @@
     }
 
     #myElement {
-      border: 1px solid #ccc;
 
-      height: 300px;
+      border: 1px solid #ccc;
+      height: 100px;
       text-align: center;
       font:  Helvetica, Arial, sans-serif;
     }
@@ -47,10 +47,9 @@
   <div id="body"></div>
     <div id="wrap">
       <a id="click">click</a>
+      <div id="myElement"></div>
     </div>
-    <div id="myElement">
 
-    </div>
     <h1 id="title">Kindle Test</h1>
 
     <p>2020年3月24日，国家科学技术奖励工作办公室发布公告，对2020年度国家科学技术奖1500多项受理项目进行公示。</p>
@@ -99,6 +98,7 @@
         console.log('click')
         window.scrollTo(0, scrollTop)
         scrollTop += 500 
+        myElement.textContent =  'scrollTop: ' + scrollTop
       }
 
     }
