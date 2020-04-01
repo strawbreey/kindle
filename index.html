@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-  <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
 
 
   <title>kindle Test</title>
@@ -15,6 +15,10 @@
     .div1 {
       width: 758px;
       height: 1024px;
+    }
+    #click {
+      height: 100px;
+      height: 100px;
     }
     #wrap {
       border: 1px solid #ccc;
@@ -33,7 +37,8 @@
     #myElement {
 
       border: 1px solid #ccc;
-      height: 100px;
+      height: 200px;
+      width: 100%;
       text-align: center;
       font:  Helvetica, Arial, sans-serif;
     }
@@ -45,12 +50,14 @@
 
 <body>
   <div id="body"></div>
-    <div id="wrap">
-      <a id="click">click</a>
-      <div id="myElement"></div>
-    </div>
+
 
     <h1 id="title">Kindle Test</h1>
+
+
+
+    <div id="myElement"></div>
+
 
     <p>2020年3月24日，国家科学技术奖励工作办公室发布公告，对2020年度国家科学技术奖1500多项受理项目进行公示。</p>
 
@@ -74,10 +81,9 @@
     <p>在国家科技奖创新团队奖评选中，钟南山呼吸疾病防控创新团队获得提名。</p>
   
 </div>
-
+<script src="https://hammerjs.github.io/dist/hammer.js"></script>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
   <script>
-    var myElement = document.getElementById('myElement');
 
 
     var mc = new Hammer(myElement);
@@ -90,15 +96,6 @@
 
     let scrollTop = 100
 
-
-    $('#click').click(res => {
-      console.log('666')
-      myElement.textContent =  'scrollTop: ' + scrollTop
-      scrollTop += 100
-      window.scrollTo(0, scrollTop)
-
-
-    })
   </script>
 </body>
 </html>
