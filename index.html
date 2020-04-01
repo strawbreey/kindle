@@ -66,10 +66,11 @@
 <script>
   var mc = new Hammer(myElement);
 
+  let i = 0
   mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
   mc.on("panleft panright panup pandown tap press", function(ev) {
-      myElement.textContent = ev.type +" gesture detected：" + window.innerWidth;
+      myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + 'index:' + i++;
   });
 </script>
 </body>
