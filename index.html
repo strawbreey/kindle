@@ -91,7 +91,7 @@
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
 
     mc.on("panleft panright panup pandown tap press", function(ev) {
-        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.outerHeight + '   ,' + window.navigator.userAgent;
+        myElement.textContent = ev.type +" gesture detected：" + window.innerWidth + ',' + window.navigator.userAgent;
     });
 
     let scrollTop = 100
