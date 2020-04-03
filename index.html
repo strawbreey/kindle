@@ -36,11 +36,9 @@
   var myElement = document.getElementById('myElement');
 
   var mc = new Hammer(myElement);
-  let i = 0
   
   mc.on("panleft panright tap press", function(ev) {
-      i += 1
-      myElement.textContent = ev.type +" gesture detected." + 'index: ' + i;
+      myElement.textContent = ev.type +" gesture detected.";
   });
 </script>
 </body>
