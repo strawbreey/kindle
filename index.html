@@ -39,7 +39,8 @@
   let i = 0
   
   mc.on("panleft panright tap press", function(ev) {
-      myElement.textContent = ev.type +" gesture detected." + 'index: ' + ++i;
+      i += 1
+      myElement.textContent = ev.type +" gesture detected." + 'index: ' + i;
   });
 </script>
 </body>
